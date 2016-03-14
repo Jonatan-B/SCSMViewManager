@@ -10,6 +10,7 @@ TODO:
 	
 CONSIDERATIONS:
 	* Have the changes be saved to a temporary file, instead of only in memory.
+	* Change New-SCSMFolder to work with non-Cireson Folders.
 <#
 	This function will save the XML file.
 #>
