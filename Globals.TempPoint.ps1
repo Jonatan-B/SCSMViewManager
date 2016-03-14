@@ -36,7 +36,7 @@ function Get-SCSMViewFolder($ID)
 }
 
 <#
-	This function will create a new SCSM Folder ( Cireson folder only ) given the fodler name, and the parent ID where it should be saved. 
+	This function will create a new SCSM Folder given the fodler name, and the parent ID where it should be saved. 
 #>
 function New-SCSMFolder($folderName, $ParentFolderID)
 {
