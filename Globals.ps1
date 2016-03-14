@@ -2,6 +2,14 @@
 # Declare Global Variables and Functions here
 #--------------------------------------------
 
+<# 
+TODO:
+	* Create a new "Save" button.
+	* Remove the Save-XML function call from other functions.
+	* Save-XML should only be called when you press the 'Save' button.
+	
+CONSIDERATIONS:
+	* Have the changes be saved to a temporary file, instead of only in memory.
 <#
 	This function will save the XML file.
 #>
