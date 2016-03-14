@@ -1,0 +1,13 @@
+﻿<Project>
+  <Version>1.1</Version>
+  <FileID>eed7641f-efe7-414e-912e-412f462d609c</FileID>
+  <ProjectType>0</ProjectType>
+  <Folders />
+  <Files>
+    <File ReferenceName="" Build="0">Startup.pss</File>
+    <File ReferenceName="Call-Global_ps1" Build="0" CommandExtension="True">Globals.ps1</File>
+    <File ReferenceName="Call-View_Manager_psf" Build="0">View Manager.psf</File>
+    <File ReferenceName="Call-EnterNewViewName_psf" Build="0">EnterNewViewName.psf</File>
+    <File ReferenceName="Call-EnterNewName_psf" Build="0">EnterNewName.psf</File>
+  </Files>
+</Project>
