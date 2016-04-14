@@ -510,7 +510,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Binary>
       <Binary>AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAu
 MC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAA
 ACZTeXN0ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkD
-AAAADwMAAAAOCQAAAk1TRnQBSQFMAgEBAwEAARABAAEQAQABEAEAARABAAT/AQkBAAj/AUIBTQE2
+AAAADwMAAAAOCQAAAk1TRnQBSQFMAgEBAwEAARgBAAEYAQABEAEAARABAAT/AQkBAAj/AUIBTQE2
 AQQGAAE2AQQCAAEoAwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYAB
 AAKAAgADwAEAAcAB3AHAAQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEA
 AykBAANVAQADTQEAA0IBAAM5AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8B
@@ -638,7 +638,7 @@ function Load-TreeView()
 		# Show the Loading bar
 		$loadingBar.Visible = $true
 		# Get the root folders from the XML File. Root files can be adentified because they contain the parent folder 'ServiceManager.Console'
-		$rootFolders = $ManagementPackXml.ManagementPack.Presentation.Folders.Folder | ? ParentFolder -Match "ServiceManager.Console"
+		$rootFolders = $ManagementPackXml.ManagementPack.Presentation.Folders.Folder | ? ParentFolder -Match "!ServiceManager"
 		# Display the number of root folders found in the status bar.
 		$statusbar1.Text = "ManagementPack :: Loading Management Pack Data :: $($rootFolders.length) have been found."
 		# Increment the loading bar to show that the first step was taken.
@@ -676,6 +676,8 @@ function Load-TreeView()
 			#>			
 			
 		} # endloop 		
+		# Acknowledge completion on Status bar
+		$statusbar1.Text = "ManagementPack :: Loading complete."
 		# Expand the Nodes.
 		$ManagementPackViews.ExpandAll()
 		# Reset the loading bar 
